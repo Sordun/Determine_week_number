@@ -1,0 +1,11 @@
+{% extends 'weeks/base.html' %}
+{% block content %}
+    <div class="d-flex flex-column align-items-center justify-content-center vh-100">
+        <h1>
+            {% if answer_weeks %}
+                Номер недели:{{ answer_weeks }}
+            {% endif %}
+        </h1>
+        <a class="btn btn-secondary btn-lg active" href="{% url 'week_number' %}" role="button">Вернуться</a>
+    </div>
+{% endblock content %}
